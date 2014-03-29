@@ -20,7 +20,7 @@ public class FileData {
 		}
 		
 		//Write to a file
-		generateCsvFile("c:\\result.arff"); 
+		generateCsvFile("c:\\result2.arff"); 
 	}
 	public static void generateCsvFile(String sFileName)
 	{
@@ -56,8 +56,9 @@ public class FileData {
 	}
 	
 	public static String stringFormat(String textLine){
-		String type = textLine.substring(0,3);
-		if(type=="spam"){
+		String type = textLine.substring(0,4);
+		System.out.println(type);
+		if(type.compareTo("spam")==0){
 			return "spam,";
 		}
 		else{
